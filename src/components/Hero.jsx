@@ -36,7 +36,7 @@ const Hero = () => {
   });
 
   return (
-    <div className="relative h-dvh bg-black overflow-x-hidden">
+    <div id="hero" className="relative h-dvh bg-black overflow-x-hidden">
       {loading && (
         <div className="flex-center absolute z-[100] h-dvh w-screen overflow-hidden bg-violet-50">
           {/* https://uiverse.io/G4b413l/tidy-walrus-92 */}
@@ -63,7 +63,16 @@ const Hero = () => {
         />
 
         <div className="absolute left-0 top-0 z-40 flex h-full w-full flex-col items-center justify-center">
-          <div className="flex flex-col items-center justify-center text-center">
+          <div className="flex flex-col items-center justify-center text-center relative">
+            {/* CYSCOM logo behind text */}
+            <div className="absolute inset-0 -z-10 flex items-center justify-center opacity-30">
+              <img 
+                src="/img/logo.png" 
+                alt="CYSCOM Logo" 
+                className="size-40 object-contain"
+              />
+            </div>
+            
             <h1 className="special-font hero-heading text-blue-100 mb-4 drop-shadow-[0_0_40px_rgba(0,0,0,1)]" style={{textShadow: '0 0 40px rgba(0,0,0,1), 0 0 80px rgba(0,0,0,0.8)'}}>
               CYS<b>C</b>OM
             </h1>

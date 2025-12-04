@@ -46,16 +46,17 @@ const FloatingImage = () => {
   };
 
   return (
-    <div id="story" className="min-h-dvh w-screen bg-black text-blue-50">
-      <div className="flex size-full flex-col items-center py-10 pb-24">
-        <p className="font-general text-sm uppercase md:text-[10px]">
+    <div id="story" className="min-h-dvh w-screen bg-black text-blue-50 cyber-grid relative">
+      <div className="section-divider absolute top-0" />
+      <div className="flex size-full flex-col items-center py-20 pb-32">
+        <p className="font-general text-sm uppercase md:text-[10px] text-glow animate-fade-in-up">
           the multiversal ip world
         </p>
 
         <div className="relative size-full">
           <AnimatedTitle
             title="the st<b>o</b>ry of <br /> a <b>c</b>yber real<b>m</b>"
-            containerClass="mt-5 pointer-events-none mix-blend-difference relative z-10"
+            containerClass="mt-16 pointer-events-none mix-blend-difference relative z-10"
           />
 
           <div className="story-img-container">
@@ -103,8 +104,14 @@ const FloatingImage = () => {
           </div>
         </div>
 
-        
+        <div className="animate-fade-in-up mt-12" style={{ animationDelay: '0.4s' }}>
+          <Button 
+            title="Discover More" 
+            containerClass="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300" 
+          />
+        </div>
       </div>
+      <div className="section-divider absolute bottom-0" />
     </div>
   );
 };

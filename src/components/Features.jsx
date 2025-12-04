@@ -28,10 +28,13 @@ export const BentoTilt = ({ children, className = "" }) => {
   return (
     <div
       ref={itemRef}
-      className={className}
+      className={
+        `${className} transition-all duration-300 border-2 border-transparent rounded-xl bg-black/80 shadow-lg overflow-hidden ` +
+        `hover:scale-105 hover:border-gradient-to-r hover:from-blue-500 hover:via-purple-500 hover:to-pink-500 hover:shadow-pink-500/30`
+      }
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      style={{ transform: transformStyle }}
+      style={{ transform: transformStyle, boxShadow: '0 4px 24px 0 rgba(236,72,153,0.15)' }}
     >
       {children}
     </div>
@@ -57,7 +60,7 @@ export const BentoCard = ({ src, title, description, isComingSoon }) => {
   const handleMouseLeave = () => setHoverOpacity(0);
 
   return (
-    <div className="relative size-full">
+    <div className="relative size-full group transition-all duration-300 rounded-xl overflow-hidden bg-gradient-to-br from-blue-900 via-purple-900 to-black shadow-lg hover:scale-105 hover:shadow-pink-500/30 hover:ring-2 hover:ring-pink-400">
       <video
         src={src}
         loop
@@ -79,7 +82,7 @@ export const BentoCard = ({ src, title, description, isComingSoon }) => {
             onMouseMove={handleMouseMove}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
-            className="border-hsla relative flex w-fit cursor-pointer items-center gap-1 overflow-hidden rounded-full bg-black px-5 py-2 text-xs uppercase text-white/20"
+            className="border-hsla relative flex w-fit cursor-pointer items-center gap-1 overflow-hidden rounded-full bg-black/80 px-5 py-2 text-xs uppercase text-blue-100 backdrop-blur-sm border border-blue-400/30"
           >
             {/* Radial gradient hover effect */}
             <div
@@ -99,15 +102,15 @@ export const BentoCard = ({ src, title, description, isComingSoon }) => {
 };
 
 const Features = () => (
-  <section className="bg-black pb-52">
+  <section className="bg-black pb-52 cyber-grid relative">
+    <div className="section-divider absolute top-0" />
     <div className="container mx-auto px-3 md:px-10">
-      <div className="px-5 py-32">
-        <p className="font-circular-web text-lg text-blue-50">
+      <div className="px-5 py-40">
+        <p className="font-circular-web text-xl text-blue-50 text-glow animate-fade-in-up">
           Into the SECURITY Layer
         </p>
-        <p className="max-w-md font-circular-web text-lg text-blue-50 opacity-50">
-          Immerse yourself in a rich and ever-expanding universe where vulnerabilites await to be cracked converge into an interconnected overlay experience
-          on your world.
+        <p className="max-w-2xl font-circular-web text-lg text-blue-50/70 opacity-90 mt-6 leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+          Immerse yourself in a rich and ever-expanding universe where vulnerabilities await to be cracked, converging into an interconnected overlay experience on your world.
         </p>
       </div>
 

@@ -84,15 +84,28 @@ const NavBar = () => {
           {/* Navigation Links and Audio Button */}
           <div className="flex h-full items-center">
             <div className="hidden md:block">
-              {navItems.map((item, index) => (
-                <a
-                  key={index}
-                  href={`#${item.toLowerCase()}`}
-                  className="nav-hover-btn"
-                >
-                  {item}
-                </a>
-              ))}
+              {navItems.map((item, index) => {
+                const getHref = (itemName) => {
+                  switch(itemName.toLowerCase()) {
+                    case 'home': return '#hero';
+                    case 'our team': return '#team';
+                    case 'leaderboard': return '#leaderboard';
+                    case 'blogs': return '#blogs';
+                    case 'about': return '#about';
+                    default: return `#${itemName.toLowerCase()}`;
+                  }
+                };
+                
+                return (
+                  <a
+                    key={index}
+                    href={getHref(item)}
+                    className="nav-hover-btn"
+                  >
+                    {item}
+                  </a>
+                );
+              })}
             </div>
 
             <button

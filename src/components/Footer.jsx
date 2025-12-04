@@ -15,7 +15,7 @@ const Footer = () => {
           ©CYSCOM 2025. All rights reserved
         </p>
 
-        <div className="flex justify-center gap-4  md:justify-start">
+        <div className="flex justify-center gap-4 md:justify-start">
           {socialLinks.map((link, index) => (
             <a
               key={index}

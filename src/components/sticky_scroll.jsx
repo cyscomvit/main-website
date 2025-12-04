@@ -54,8 +54,33 @@ const content = [
 ];
 export function StickyScrollRevealDemo() {
   return (
-    <div className="w-full py-4">
-      <StickyScroll content={content} />
+    <div className="w-full py-16 animate-fade-in-up cyber-grid relative">
+      <div className="section-divider absolute top-0" />
+      <div className="container mx-auto px-5 md:px-10 mb-16">
+        <div className="text-center animate-fade-in-up">
+          <p className="font-general text-sm uppercase tracking-wider text-blue-300 mb-6 text-glow">
+            Interactive Experience
+          </p>
+          <div className="overflow-hidden">
+            <h2 className="font-zentry text-4xl md:text-6xl font-black text-blue-50 text-glow mb-8 animate-slide-in-right" style={{ animationDelay: '0.2s' }}>
+              <span className="inline-block animate-bounce-subtle" style={{ animationDelay: '0.5s' }}>Coll</span>
+              <b className="text-purple-400 inline-block animate-bounce-subtle" style={{ animationDelay: '0.6s' }}>a</b>
+              <span className="inline-block animate-bounce-subtle" style={{ animationDelay: '0.7s' }}>bor</span>
+              <b className="text-pink-400 inline-block animate-bounce-subtle" style={{ animationDelay: '0.8s' }}>a</b>
+              <span className="inline-block animate-bounce-subtle" style={{ animationDelay: '0.9s' }}>tive</span>
+              <br className="md:hidden" />
+              <span className="inline-block animate-bounce-subtle" style={{ animationDelay: '1.0s' }}>Platf</span>
+              <b className="text-blue-400 inline-block animate-bounce-subtle" style={{ animationDelay: '1.1s' }}>o</b>
+              <span className="inline-block animate-bounce-subtle" style={{ animationDelay: '1.2s' }}>rm</span>
+            </h2>
+          </div>
+        </div>
+      </div>
+      <StickyScroll 
+        content={content} 
+        contentClassName="rounded-xl shadow-lg bg-gradient-to-br from-blue-900 via-purple-900 to-black glow-effect" 
+      />
+      <div className="section-divider absolute bottom-0" />
     </div>
   );
 }
