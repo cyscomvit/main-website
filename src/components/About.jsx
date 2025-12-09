@@ -51,6 +51,8 @@ const About = () => {
           <img
             src="img/mid.jpg"
             alt="Background"
+            loading="lazy"
+            decoding="async"
             className="absolute left-0 top-0 size-full object-cover"
           />
         </div>

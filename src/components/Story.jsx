@@ -70,6 +70,8 @@ const FloatingImage = () => {
                   onMouseEnter={handleMouseLeave}
                   src="/img/lorenzo-herrera-p0j-mE6mGo4-unsplash.jpg"
                   alt="lorenzo-herrera-p0j-mE6mGo4-unsplash.jpg"
+                  loading="lazy"
+                  decoding="async"
                   className="object-contain"
                 />
               </div>
@@ -107,7 +109,7 @@ const FloatingImage = () => {
         <div className="animate-fade-in-up mt-12" style={{ animationDelay: '0.4s' }}>
           <Button 
             title="Discover More" 
-            containerClass="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300" 
+            containerClass="" 
           />
         </div>
       </div>

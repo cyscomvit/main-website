@@ -136,19 +136,14 @@ const EventCard = ({ name, date, description, image }) => {
       {/* Matrix Rain Effect */}
       <MatrixRain isVisible={showMatrix} />
       
-      {/* Animated gradient overlay on hover */}
-      <div className={`absolute inset-0 transition-opacity duration-500 ${
-        isHovered 
-          ? 'bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10 opacity-100' 
-          : 'bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0'
-      }`} />
-
       <div className="relative z-10">
         {/* Event Image */}
         <div className="mb-4 flex h-32 items-center justify-center overflow-hidden rounded-md bg-black/40 p-4">
           <img
             src={image}
             alt={name}
+            loading="lazy"
+            decoding="async"
             className="h-full w-auto object-contain opacity-80 transition-all duration-500 group-hover:scale-110 group-hover:opacity-100"
           />
         </div>
@@ -161,7 +156,7 @@ const EventCard = ({ name, date, description, image }) => {
             {isHovered ? displayText : name}
           </h3>
           
-          <p className="font-general text-xs uppercase tracking-wider text-blue-300/70 transition-colors duration-300 hover:text-purple-400">
+          <p className="font-general text-xs uppercase tracking-wider text-blue-300/70 transition-colors duration-300">
             <span className="text-blue-400">&gt;</span> {date}
           </p>
           
@@ -172,23 +167,16 @@ const EventCard = ({ name, date, description, image }) => {
           {/* Subtle status indicator */}
           <div className="flex items-center space-x-2 font-general text-xs">
             <div className={`w-2 h-2 rounded-full transition-all duration-300 ${
-              isHovered ? 'bg-purple-400 animate-pulse' : 'bg-blue-400'
+              isHovered ? 'bg-blue-400 animate-pulse' : 'bg-blue-400'
             }`} />
-            <span className={`transition-colors duration-300 ${
-              isHovered ? 'text-purple-400' : 'text-blue-400'
-            }`}>
+            <span className="text-blue-400">
               {isHovered ? 'LOADING...' : 'READY'}
             </span>
           </div>
         </div>
       </div>
 
-      {/* Subtle corner accent */}
-      <div className={`absolute -bottom-10 -right-10 size-32 rounded-full blur-2xl transition-all duration-500 ${
-        isHovered 
-          ? 'bg-purple-500/15' 
-          : 'bg-blue-500/10'
-      }`} />
+
       
       {/* Subtle grid pattern */}
       <div className="absolute inset-0 opacity-5">
@@ -311,13 +299,13 @@ const PastEvents = () => {
         
         {/* Section Header */}
         <div className="mb-24 flex flex-col items-center gap-8 text-center">
-          <p className="font-general text-sm uppercase tracking-wider text-blue-300 md:text-base text-glow animate-fade-in-up">
+          <p className="font-general text-sm uppercase tracking-wider text-blue-300 md:text-base animate-fade-in-up">
             Our Journey
           </p>
 
           <AnimatedTitle
             title="P<b>a</b>st Ev<b>e</b>nts <br /> Th<b>r</b>ough the Ye<b>a</b>rs"
-            containerClass="mt-5 !text-blue-100 text-center text-glow"
+            containerClass="mt-5 !text-blue-100 text-center"
           />
 
           <p className="mt-5 max-w-2xl font-circular-web text-lg text-blue-50/70">

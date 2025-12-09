@@ -62,3 +62,4 @@ const Button = ({ id, title, rightIcon, leftIcon, containerClass, onClick }) => 
 };
 
 export default Button;
+  

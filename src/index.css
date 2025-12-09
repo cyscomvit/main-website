@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   width: 100dvw;
   overflow-x: hidden;
@@ -68,7 +72,7 @@ body {
   
   .nav-hover-btn:hover {
     color: #00ff41;
-    text-shadow: 0 0 5px #00ff41, 0 0 10px #00ff41;
+    text-shadow: 0 0 10px #00ff41, 0 0 20px #00ff41, 0 0 30px #00ff41;
     transform: translateY(-2px);
   }
 
@@ -255,15 +259,15 @@ body {
   @keyframes cryptoGlow {
     0%, 100% {
       color: #3b82f6;
-      text-shadow: 0 0 3px #3b82f6, 0 0 6px #3b82f6;
+      text-shadow: 0 0 5px #3b82f6, 0 0 10px #3b82f6;
     }
     33% {
       color: #8b5cf6;
-      text-shadow: 0 0 3px #8b5cf6, 0 0 6px #8b5cf6;
+      text-shadow: 0 0 5px #8b5cf6, 0 0 10px #8b5cf6;
     }
     66% {
       color: #ec4899;
-      text-shadow: 0 0 3px #ec4899, 0 0 6px #ec4899;
+      text-shadow: 0 0 5px #ec4899, 0 0 10px #ec4899;
     }
   }
 
@@ -352,12 +356,11 @@ body {
 
   .crypto-card:hover {
     border-color: rgba(139, 92, 246, 0.6);
-    box-shadow: 0 0 10px rgba(59, 130, 246, 0.15), 0 0 20px rgba(139, 92, 246, 0.08);
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.2), 0 0 40px rgba(139, 92, 246, 0.1);
   }
 
   .crypto-title {
     font-family: 'Zentry', sans-serif;
-    color: #3b82f6;
     border-right: 2px solid #3b82f6;
     overflow: hidden;
     white-space: nowrap;

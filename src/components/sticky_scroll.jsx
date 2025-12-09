@@ -24,6 +24,8 @@ const content = [
           src="/linear.webp"
           width={300}
           height={300}
+          loading="lazy"
+          decoding="async"
           className="size-full object-cover"
           alt="linear board demo" />
       </div>

@@ -55,26 +55,29 @@ const Hero = () => {
         <video
           ref={videoRef}
           src="videos/hero-1.mp4"
+          preload="metadata"
+          poster="/img/logo.png"
           autoPlay
           loop
           muted
+          playsInline
+          disableRemotePlayback
           className="absolute left-0 top-0 size-full object-cover object-center"
           onLoadedData={handleVideoLoad}
         />
 
         <div className="absolute left-0 top-0 z-40 flex h-full w-full flex-col items-center justify-center">
-          <div className="flex flex-col items-center justify-center text-center relative">
-            {/* CYSCOM logo behind text */}
-            <div className="absolute inset-0 -z-10 flex items-center justify-center opacity-30">
-              <img 
-                src="/img/logo.png" 
-                alt="CYSCOM Logo" 
-                className="size-40 object-contain"
+          <div className="flex flex-col items-center justify-center text-center">
+            <h1 className="special-font hero-heading relative mb-4 overflow-hidden rounded-lg  px-8 py-4 backdrop-blur-md text-blue-100">
+              <img
+                src="/img/logo.png"
+                alt="CYSCOM Logo"
+                loading="lazy"
+                decoding="async"
+                fetchpriority="low"
+                className="absolute inset-0 size-full object-cover opacity-30"
               />
-            </div>
-            
-            <h1 className="special-font hero-heading text-blue-100 mb-4 drop-shadow-[0_0_40px_rgba(0,0,0,1)]" style={{textShadow: '0 0 40px rgba(0,0,0,1), 0 0 80px rgba(0,0,0,0.8)'}}>
-              CYS<b>C</b>OM
+              <span className="relative z-10">CYS<b>C</b>OM</span>  
             </h1>
 
             <p className="mb-5 max-w-64 font-robert-regular text-blue-100 hero-text">
