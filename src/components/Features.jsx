@@ -61,21 +61,25 @@ export const BentoCard = ({ src, title, description, isComingSoon }) => {
 
   return (
     <div className="relative size-full group transition-all duration-300 rounded-xl overflow-hidden bg-gradient-to-br from-blue-900 via-purple-900 to-black shadow-lg hover:scale-105 hover:shadow-pink-500/30 hover:ring-2 hover:ring-pink-400">
-      <video
-        src={src}
-        loop
-        muted
-        autoPlay
-        playsInline
-        preload="metadata"
-        poster="/img/logo.png"
-        className="absolute left-0 top-0 size-full object-cover object-center"
-      />
+      {src.endsWith('.mp4') || src.endsWith('.webm') ? (
+        <video
+          src={src}
+          loop
+          muted
+          autoPlay
+          className="absolute left-0 top-0 size-full object-cover object-center"
+        />
+      ) : (
+        <img
+          src={src}
+          className="absolute left-0 top-0 size-full object-cover object-center"
+        />
+      )}
       <div className="relative z-10 flex size-full flex-col justify-between p-5 text-blue-50">
         <div>
-          <h1 className="bento-title special-font">{title}</h1>
+          <h1 className="bento-title special-font drop-shadow-[4px_4px_4px_rgba(0,0,0,0.9)]">{title}</h1>
           {description && (
-            <p className="mt-3 max-w-64 text-xs md:text-base">{description}</p>
+            <p className="mt-3 max-w-80 text-xs md:text-base drop-shadow-[4px_4px_4px_rgba(0,0,0,0.9)]">{description}</p>
           )}
         </div>
 
@@ -96,7 +100,7 @@ export const BentoCard = ({ src, title, description, isComingSoon }) => {
               }}
             />
             <TiLocationArrow className="relative z-20" />
-            <p className="relative z-20 text-white/90">coming soon</p>
+            <p className="relative z-20">coming soon</p>
           </div>
         )}
       </div>
@@ -116,58 +120,94 @@ const Features = () => (
           Immerse yourself in a rich and ever-expanding universe where vulnerabilities await to be cracked, converging into an interconnected overlay experience on your world.
         </p>
       </div>
-
+      <a
+        href="https://blog.cyscomvit.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block size-full"
+      >
       <BentoTilt className="border-hsla relative mb-7 h-96 w-full overflow-hidden rounded-md md:h-[65vh]">
         <BentoCard
-          src="videos/feature-1.mp4"
+          src="img/newsletter.webp"
           title={
             <>
-              Ha<b>c</b>ker
+              Mont<b>h</b>ly High<b>l</b>ights
             </>
           }
-          description="A cross-platform metagame app, turning your activities across Web2 and Web3 games into a rewarding adventure."
-          isComingSoon
+          description="Because the cyber world never sleeps — and neither do we. From threats to trends, from skills to stories — your cyber journey grows with every scroll. Welcome to this month’s edition."
+          // isComingSoon
         />
       </BentoTilt>
-
+        
+      </a>
+   
       <div className="grid h-[135vh] w-full grid-cols-2 grid-rows-3 gap-7">
         <BentoTilt className="bento-tilt_1 row-span-1 md:col-span-1 md:row-span-2">
+          <a
+            href="https://blog.cyscomvit.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block size-full"
+          >
           <BentoCard
             src="videos/feature-2.mp4"
             title={
               <>
-                zig<b>m</b>a
+                CT<b>F</b>s AND EV<b>E</b>NTS
               </>
             }
-            description="An anime and gaming-inspired NFT collection - the IP primed for expansion."
-            isComingSoon
+            description="Not just a challenge — it’s a journey.
+Every event helps you grow, hack smarter, and think deeper.
+And the next one? Already on the way."
+            // isComingSoon
           />
+
+          </a>
         </BentoTilt>
+        
 
         <BentoTilt className="bento-tilt_1 row-span-1 ms-32 md:col-span-1 md:ms-0">
-          <BentoCard
-            src="videos/feature-3.mp4"
-            title={
-              <>
-                n<b>e</b>xus
-              </>
-            }
-            description="A gamified social hub, adding a new dimension of play to social interaction for Web3 communities."
-            isComingSoon
-          />
-        </BentoTilt>
+          <a
+            href="https://blog.cyscomvit.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block size-full"
+          >
 
-        <BentoTilt className="bento-tilt_1 me-14 md:col-span-1 md:me-0">
           <BentoCard
             src="videos/feature-4.mp4"
             title={
               <>
-                az<b>u</b>l
+                PROJE<b>C</b>TS
               </>
             }
-            description="A cross-world AI Agent - elevating your gameplay to be more fun and productive."
-            isComingSoon
+            description="Every project is a step forward in skill, creativity, and cybersecurity. Built, tested, and refined by our chapter."
+            // isComingSoon
           />
+
+
+          </a>
+        </BentoTilt>
+
+        <BentoTilt className="bento-tilt_1 me-14 md:col-span-1 md:me-0">
+          <a
+            href="https://blog.cyscomvit.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block size-full"
+          >
+            <BentoCard
+              src="img/leaderboard2.webp"
+              title={
+                <>
+                  LEADER<b>B</b>OARD
+                </>
+              }
+              description= "Each event shapes the leaderboard. Will the next flag push you higher?"
+              // isComingSoon
+            />
+
+          </a>
         </BentoTilt>
 
         <BentoTilt className="bento-tilt_2">
@@ -181,16 +221,14 @@ const Features = () => (
         </BentoTilt>
 
         <BentoTilt className="bento-tilt_2">
-          <video
-            src="videos/feature-5.mp4"
-            loop
-            muted
-            autoPlay
-            playsInline
-            preload="metadata"
-            poster="/img/logo.png"
-            className="size-full object-cover object-center"
-          />
+          <a
+            href="https://blog.cyscomvit.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block size-full"
+          >
+            <BentoCard src="img/blogs.jpg" />
+          </a>
         </BentoTilt>
       </div>
     </div>

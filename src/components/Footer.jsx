@@ -23,7 +23,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="text-white transition-all duration-300 ease-in-out hover:scale-110">
-            >
+            
               {link.icon}
             </a>
           ))}
@@ -32,7 +32,7 @@ const Footer = () => {
         <a
           href="#privacy-policy"
           className="text-center text-sm font-light hover:underline md:text-right transition-colors duration-300">
-        >
+        
           Privacy Policy
         </a>
       </div>

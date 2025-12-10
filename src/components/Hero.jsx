@@ -54,11 +54,11 @@ const Hero = () => {
       >
         <video
           ref={videoRef}
-          src="videos/hero-1.mp4"
+          src="videos/trial.mp4"
           preload="metadata"
           poster="/img/logo.png"
           autoPlay
-          loop
+          
           muted
           playsInline
           disableRemotePlayback
@@ -69,14 +69,14 @@ const Hero = () => {
         <div className="absolute left-0 top-0 z-40 flex h-full w-full flex-col items-center justify-center">
           <div className="flex flex-col items-center justify-center text-center">
             <h1 className="special-font hero-heading relative mb-4 overflow-hidden rounded-lg  px-8 py-4 backdrop-blur-md text-blue-100">
-              <img
+              {/* <img
                 src="/img/logo.png"
                 alt="CYSCOM Logo"
                 loading="lazy"
                 decoding="async"
                 fetchpriority="low"
                 className="absolute inset-0 size-full object-cover opacity-30"
-              />
+              /> */}
               <span className="relative z-10">CYS<b>C</b>OM</span>  
             </h1>
 

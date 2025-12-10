@@ -4,52 +4,54 @@ import { StickyScroll } from "../ui/sticky-scroll-reveal";
 
 const content = [
   {
-    title: "Collabor<b>a</b>tive <br /> Editing",
+    title: "Tech Giants",
     description:
-      "Work together in real time with your team, clients, and stakeholders. Collaborate on documents, share ideas, and make decisions quickly. With our platform, you can streamline your workflow and increase productivity.",
+      "Leading the way in innovation and technology. Our past sponsors include industry leaders who have supported our mission to foster a community of developers and creators.",
     content: (
-      <div
-        className="flex size-full items-center justify-center bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] text-white">
-        Collaborative Editing
+      <div className="flex size-full items-center justify-center bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] text-white">
+        <img
+            src="/img/logo.png"
+            width={300}
+            height={300}
+            className="size-full object-contain p-10"
+            alt="Tech Giants Logo"
+        />
       </div>
     ),
   },
   {
-    title: "Real <b>T</b>ime <br /> Changes",
+    title: "Innovation Labs",
     description:
-      "See changes as they happen. With our platform, you can track every modification in real time. No more confusion about the latest version of your project. Say goodbye to the chaos of version control and embrace the simplicity of real-time updates.",
+      "Pioneering the future of software development. We are proud to have partnered with organizations that are pushing the boundaries of what is possible.",
     content: (
       <div className="flex size-full items-center justify-center text-white">
         <img
-          src="/linear.webp"
+          src="/img/jsm-logo.png"
           width={300}
           height={300}
-          loading="lazy"
-          decoding="async"
-          className="size-full object-cover"
-          alt="linear board demo" />
+          className="size-full object-contain p-10"
+          alt="Innovation Labs Logo"
+        />
       </div>
     ),
   },
   {
-    title: "Versi<b>o</b>n <br /> Control",
+    title: "Creative Studios",
     description:
-      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+      "Empowering designers and artists worldwide. Our collaboration with creative studios has enabled us to bring unique and visually stunning experiences to our audience.",
     content: (
-      <div
-        className="flex size-full items-center justify-center bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] text-white">
-        Version control
+      <div className="flex size-full items-center justify-center bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] text-white">
+         <div className="text-4xl font-bold text-black">Creative Studios</div>
       </div>
     ),
   },
   {
-    title: "Running <b>O</b>ut <br /> of Content",
+    title: "Global Networks",
     description:
-      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+      "Connecting people and ideas across the globe. Our sponsors help us reach a wider audience and build a diverse and inclusive community.",
     content: (
-      <div
-        className="flex size-full items-center justify-center bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] text-white">
-        Running out of content
+      <div className="flex size-full items-center justify-center bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] text-white">
+        <div className="text-4xl font-bold">Global Networks</div>
       </div>
     ),
   },
@@ -61,19 +63,13 @@ export function StickyScrollRevealDemo() {
       <div className="container mx-auto px-5 md:px-10 mb-16">
         <div className="text-center animate-fade-in-up">
           <p className="font-general text-sm uppercase tracking-wider text-blue-300 mb-6 text-glow">
-            Interactive Experience
+            Our Partners
           </p>
           <div className="overflow-hidden">
             <h2 className="font-zentry text-4xl md:text-6xl font-black text-blue-50 text-glow mb-8 animate-slide-in-right" style={{ animationDelay: '0.2s' }}>
-              <span className="inline-block animate-bounce-subtle" style={{ animationDelay: '0.5s' }}>Coll</span>
-              <b className="text-purple-400 inline-block animate-bounce-subtle" style={{ animationDelay: '0.6s' }}>a</b>
-              <span className="inline-block animate-bounce-subtle" style={{ animationDelay: '0.7s' }}>bor</span>
-              <b className="text-pink-400 inline-block animate-bounce-subtle" style={{ animationDelay: '0.8s' }}>a</b>
-              <span className="inline-block animate-bounce-subtle" style={{ animationDelay: '0.9s' }}>tive</span>
-              <br className="md:hidden" />
-              <span className="inline-block animate-bounce-subtle" style={{ animationDelay: '1.0s' }}>Platf</span>
-              <b className="text-blue-400 inline-block animate-bounce-subtle" style={{ animationDelay: '1.1s' }}>o</b>
-              <span className="inline-block animate-bounce-subtle" style={{ animationDelay: '1.2s' }}>rm</span>
+              <span className="inline-block animate-bounce-subtle" style={{ animationDelay: '0.5s' }}>Past</span>
+              <span className="inline-block w-4"></span>
+              <span className="inline-block animate-bounce-subtle" style={{ animationDelay: '0.7s' }}>Sponsors</span>
             </h2>
           </div>
         </div>
