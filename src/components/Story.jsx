@@ -72,7 +72,8 @@ const FloatingImage = () => {
                   alt="lorenzo-herrera-p0j-mE6mGo4-unsplash.jpg"
                   loading="lazy"
                   decoding="async"
-                  className="object-contain"
+                  className="object-contain w-full h-full"
+                  style={{ transformStyle: 'preserve-3d', backfaceVisibility: 'hidden' }}
                 />
               </div>
             </div>

@@ -130,24 +130,19 @@ const EventCard = ({ name, date, description, image }) => {
         transform: transformStyle,
         transitionProperty: 'transform, border-color',
         transitionDuration: '0.3s',
-        transitionTimingFunction: 'ease-out'
+        transitionTimingFunction: 'ease-out',
+        backgroundImage: `url(${image})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center'
       }}
     >
+      {/* Dark overlay for readability */}
+      <div className="absolute inset-0 bg-black/70 group-hover:bg-black/60 transition-all duration-500" />
+      
       {/* Matrix Rain Effect */}
       <MatrixRain isVisible={showMatrix} />
       
       <div className="relative z-10">
-        {/* Event Image */}
-        <div className="mb-4 flex h-32 items-center justify-center overflow-hidden rounded-md bg-black/40 p-4">
-          <img
-            src={image}
-            alt={name}
-            loading="lazy"
-            decoding="async"
-            className="h-full w-auto object-contain opacity-80 transition-all duration-500 group-hover:scale-110 group-hover:opacity-100"
-          />
-        </div>
-
         {/* Event Details */}
         <div className="space-y-4 relative z-10">
           <h3 className={`crypto-title text-xl font-black uppercase transition-colors duration-300 md:text-2xl ${
@@ -215,76 +210,34 @@ const PastEvents = () => {
 
   const events = [
     {
-      name: "Cyber Defender",
-      date: "April 19-20, 2022",
-      description: "A 2-day technical and fun event for cyber enthusiasts, including a workshop and CTF.",
-      image: "/img/logo.png"
+      name: "V-MEDITHON",
+      date: "October 6, 2024",
+      description: "A healthcare-focused hackathon bringing together innovators to solve medical challenges through technology.",
+      image: "/img/gallery-1.webp"
     },
     {
-      name: "HackOverflow",
-      date: "September 27 - October 2, 2022",
-      description: "Flagship hackathon with an online ideathon and 24-hour offline event focused on NGO technological problems, with a ₹25,000 prize pool.",
-      image: "/img/logo.png"
+      name: "CodeNConquer",
+      date: "November 15, 2024",
+      description: "An intensive coding competition testing algorithmic skills and problem-solving abilities.",
+      image: "/img/gallery-2.webp"
     },
     {
-      name: "ICRTAC-2018",
-      date: "2018",
-      description: "International Conference on Recent Trends in Advanced Computing.",
-      image: "/img/logo.png"
+      name: "CyberConverge",
+      date: "September 20, 2024",
+      description: "CTF and hacking event with learning and collaboration opportunities for cybersecurity enthusiasts.",
+      image: "/img/gallery-3.webp"
     },
     {
-      name: "ICRTAC-2019",
-      date: "2019",
-      description: "International Conference on Recent Trends in Advanced Computing.",
-      image: "/img/logo.png"
+      name: "Intrusion",
+      date: "August 11, 2024",
+      description: "A comprehensive cybersecurity workshop and CTF challenge focused on penetration testing.",
+      image: "/img/gallery-4.webp"
     },
     {
-      name: "Outreach Programs",
-      date: "Various dates",
-      description: "Student outreach programs to spread cybersecurity awareness.",
-      image: "/img/logo.png"
-    },
-    {
-      name: "OPENGOV",
-      date: "Undated",
-      description: "Event focused on open government and cybersecurity.",
-      image: "/img/logo.png"
-    },
-    {
-      name: "2020HACK",
-      date: "2020",
-      description: "Hackathon event.",
-      image: "/img/logo.png"
-    },
-    {
-      name: "Tetraflip",
-      date: "Undated",
-      description: "Cybersecurity-related event.",
-      image: "/img/logo.png"
-    },
-    {
-      name: "TOVC 1.0",
-      date: "Undated",
-      description: "Event possibly related to cybersecurity challenges.",
-      image: "/img/logo.png"
-    },
-    {
-      name: "Waspcon",
-      date: "Undated",
-      description: "Workshop or conference on web application security.",
-      image: "/img/logo.png"
-    },
-    {
-      name: "Informational Session on Malware",
-      date: "Undated",
-      description: "Session providing information on malware threats and prevention.",
-      image: "/img/logo.png"
-    },
-    {
-      name: "CyberConverge 2025",
-      date: "2025",
-      description: "CTF and hacking event with learning and collaboration opportunities.",
-      image: "/img/logo.png"
+      name: "HackFiesta'24",
+      date: "December 1-2, 2024",
+      description: "Our flagship 24-hour hackathon featuring innovative projects and collaborative problem-solving.",
+      image: "/img/gallery-5.webp"
     }
   ];
 
